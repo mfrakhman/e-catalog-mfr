@@ -5,12 +5,14 @@ const {
   createNewProduct,
   editProduct,
   deleteProduct,
+  getProductById,
 } = require("../controllers/product.controller");
 
 const router = Router();
 
 router.get("/", getAllProducts);
-router.post("/", authMiddleware, createNewProduct);
+router.get("/:id", getProductById);
+router.post("/", createNewProduct);
 router.patch("/:id", editProduct);
 router.delete("/:id", deleteProduct);
 

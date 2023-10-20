@@ -32,22 +32,41 @@
     </header>
     <main>
       <section class="table-products">
-        <h2>List of Products</h2>
-        <table class="table-content" id="table-content">
-          <tr>
-            <th>Product Name</th>
-            <th>Product Price</th>
-            <th>Product Description</th>
-            <th>Product Image</th>
-            <th>Action</th>
-          </tr>
-        </table>
-        <a href="create.html" class="btn-create" id="btn-create">Create New Product</a href="create.html">
+        <h2>Edit Product</h2>
+        <form class="form-edit">
+          <div class="form-input">
+            <label for="">Product Name: </label>
+            <input type="text" placeholder="Cappucino" id="product-name" />
+          </div>
+          <div class="form-input">
+            <label for="">Product Description: </label>
+            <input
+              type="text"
+              placeholder="Milk with Coffee"
+              id="product-desc"
+            />
+          </div>
+          <div class="form-input">
+            <label for="">Product Price: </label>
+            <input type="number" placeholder="35000" id="product-price" />
+          </div>
+          <div class="form-input">
+            <label for="">Product Image URL: </label>
+            <input
+              type="text"
+              placeholder="https://example.com/images/espresso.jpg"
+              id="product-image"
+            />
+          </div>
+          <div>
+            <button type="submit" id="btn-edit-product">edit Product</button>
+          </div>
+        </form>
       </section>
     </main>
     <script>
       feather.replace();
     </script>
-    <script src="./js/admin.js"></script>
+    <script src="./js/edit.js"></script>
   </body>
 </html>

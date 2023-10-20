@@ -5,6 +5,16 @@ const getAllProducts = async (req, res) => {
   res.json(result);
 };
 
+const getProductById = async (req, res) => {
+  const result = await knex
+    .select()
+    .from("products")
+    .where("id", req.params.id)
+    .limit(1)
+    .returning(["id", "name", "description", "price", "image"]);
+  res.status(200).json(result);
+};
+
 const createNewProduct = async (req, res) => {
   const { name, description, price, image } = req.body;
   const result = await knex("products")
@@ -37,4 +47,5 @@ module.exports = {
   createNewProduct,
   editProduct,
   deleteProduct,
+  getProductById,
 };

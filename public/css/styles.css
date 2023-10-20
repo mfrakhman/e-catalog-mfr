@@ -110,6 +110,38 @@ p {
   width: 100%;
 }
 
+.table-products {
+  margin-top: 48px;
+}
+
+.table-content {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-content th,
+td {
+  text-align: center;
+  border: 1px solid;
+}
+
+.table-content-image img {
+  width: 100px;
+  text-align: center;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.table-content button {
+  border: 1px solid;
+}
+
+.form-input {
+  border: 1px solid;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
