@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-card">
+        <h2>Login</h2>
+        <div class="login-form">
+          <form>
+            <div class="input-box">
+              <a href=""><i data-feather="user"></i></a>
+              <input
+                name="username"
+                type="text"
+                placeholder="Username"
+                required
+                id="in-username"
+              />
+            </div>
+            <div class="input-box">
+              <a href=""><i data-feather="lock"></i></a>
+              <input
+                name="password"
+                type="password"
+                placeholder="Password"
+                required
+                id="in-password"
+              />
+            </div>
+            <button type="submit" class="btn-login" id="submit">Login</button>
+            <p>dont have an account? <a href="/register">Register</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

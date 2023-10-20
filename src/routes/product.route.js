@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const authMiddleware = require("../middlewares/auth.middleware");
 const {
   getAllProducts,
   createNewProduct,
@@ -6,11 +7,11 @@ const {
   deleteProduct,
 } = require("../controllers/product.controller");
 
-const route = Router();
+const router = Router();
 
-route.get("/", getAllProducts);
-route.post("/", createNewProduct);
-route.patch("/:id", editProduct);
-route.delete("/:id", deleteProduct);
+router.get("/", getAllProducts);
+router.post("/", authMiddleware, createNewProduct);
+router.patch("/:id", editProduct);
+router.delete("/:id", deleteProduct);
 
-module.exports = route;
+module.exports = router;

@@ -1,7 +1,7 @@
 const knex = require("../../db");
 
 const getAllProducts = async (req, res) => {
-  const result = await knex.select().from("products");
+  const result = await knex.select().from("products").orderBy("id");
   res.json(result);
 };
 

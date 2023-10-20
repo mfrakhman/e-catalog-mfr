@@ -1,0 +1,159 @@
+:root {
+  --primary: rgb(255, 255, 255);
+  --secondary: rgb(86, 53, 23);
+  --tertiary: rgb(124, 75, 30);
+  --bg: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 3000px;
+  padding: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 48px;
+  padding-inline: 16px;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.navbar .navbar-logo span {
+  color: var(--tertiary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  transition: 0.4s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--tertiary);
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0 1rem;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.main {
+  margin-top: 48px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  border: 1px solid;
+  width: 100%;
+}
+
+.product-card img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-card-content {
+  text-align: center;
+  padding: 0px 16px 16px;
+}
+
+.product-card-content p {
+  text-align: left;
+}
+
+.product-card img {
+  width: 100%;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: black;
+    width: fit-content;
+    height: 100vh;
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
