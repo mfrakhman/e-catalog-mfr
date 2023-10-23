@@ -20,6 +20,7 @@ document.addEventListener("click", function (e) {
 //   }
 //   prevScrollpos = currentScrollPos;
 // };
+
 const rupiah = Intl.NumberFormat("id-ID", {
   style: "currency",
   currency: "IDR",

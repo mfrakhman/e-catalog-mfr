@@ -58,5 +58,3 @@ const handleSubmit = async e => {
 };
 
 submitBtn.addEventListener("click", handleSubmit);
-
-

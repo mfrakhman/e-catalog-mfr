@@ -3,40 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <div class="login-container">
-      <div class="login-card">
-        <h2>Login</h2>
-        <div class="login-form">
-          <form>
-            <div class="input-box">
-              <a href=""><i data-feather="user"></i></a>
-              <input
-                name="username"
-                type="text"
-                placeholder="Username"
-                required
-                id="in-username"
-              />
-            </div>
-            <div class="input-box">
-              <a href=""><i data-feather="lock"></i></a>
-              <input
-                name="password"
-                type="password"
-                placeholder="Password"
-                required
-                id="in-password"
-              />
-            </div>
-            <button type="submit" class="btn-login" id="submit">Login</button>
-            <p>dont have an account? <a href="/register">Register</a></p>
-          </form>
+    <!-- <section>
+      <div class="login-container">
+        <div class="login-card">
+          <h2>Login</h2>
+          <div class="login-form">
+            <form>
+              <div class="input-box">
+                <a href=""><i data-feather="user"></i></a>
+                <input
+                  name="username"
+                  type="text"
+                  placeholder="Username"
+                  required
+                  id="in-username"
+                />
+              </div>
+              <div class="input-box">
+                <a href=""><i data-feather="lock"></i></a>
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  required
+                  id="in-password"
+                />
+              </div>
+              <button type="submit" class="btn-login" id="submit">Login</button>
+              <p>dont have an account? <a href="/register">Register</a></p>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </section> -->
+    <section class="login-card pt-5">
+      <div class="login-page">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <h3 class="mb-3 text-center">Admin Login</h3>
+              <div class="bg-white box-shadow">
+                <div class="row">
+                  <div class="col-md-7 pe-0">
+                    <div class="form-left h-100 py-5 px-5">
+                      <form action="" class="row g-4">
+                        <div class="col-12">
+                          <label
+                            >Username<span class="text-danger">*</span></label
+                          >
+                          <div class="input-group">
+                            <div class="input-group-text">
+                              <i data-feather="user"></i>
+                            </div>
+                            <input
+                              class="form-control"
+                              name="username"
+                              type="text"
+                              placeholder="Username"
+                              required
+                              id="in-username"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label
+                            >Password<span class="text-danger">*</span></label
+                          >
+                          <div class="input-group">
+                            <div class="input-group-text">
+                              <i data-feather="key"></i>
+                            </div>
+                            <input
+                              class="form-control"
+                              name="password"
+                              type="password"
+                              placeholder="Password"
+                              required
+                              id="in-password"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button
+                            type="submit"
+                            class="btn btn-dark px-4 float-end mt-4"
+                            id="submit"
+                          >
+                            Login
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-5 ps-0 d-none d-md-block">
+                    <div
+                      class="form-right h-100 bg-dark text-white text-center pt-5"
+                    >
+                      <h2 class="login-logo">Coffee<span>In</span></h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      feather.replace();
+    </script>
     <script src="./js/login.js"></script>
   </body>
 </html>
